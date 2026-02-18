@@ -1,7 +1,5 @@
-1.Setting up React app with Build tool
-2.Exploring folder Structure
-3.Working with Funtional Components
-4.Reusing Component
-5.Passing data with Props
+Adding Interactivity to React apps with state
+How to Manage State for Different Components
+Conditional Rendering 
 
- Starting at 2:40 PM
+Starting at 2:45 PM
