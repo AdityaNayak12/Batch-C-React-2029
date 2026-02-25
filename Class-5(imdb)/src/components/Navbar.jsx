@@ -1,6 +1,15 @@
-import React from 'react'
+import React, { use, useState } from 'react'
+import {Link} from 'react-router-dom'
 
 function Navbar() {
+
+    const [count , setCount] = useState(0)
+
+    function inc(){
+        setCount(count+1)
+    }
+
+
   return (
     <nav className="flex items-center justify-between px-8 py-4 bg-slate-900 text-white shadow-md">
       
@@ -17,16 +26,20 @@ function Navbar() {
 
       {/* Right Side: Navigation Links */}
       <div className="flex space-x-10 items-center">
-        <a href="/" className="text-sm font-semibold text-gray-300 hover:text-blue-400 transition-all duration-300 uppercase tracking-wide">
+        <Link to="/" className="text-sm font-semibold text-gray-300 hover:text-blue-400 transition-all duration-300 uppercase tracking-wide">
           Movies
-        </a>
-        <a href="/watchlist" className="text-sm font-semibold text-gray-300 hover:text-blue-400 transition-all duration-300 uppercase tracking-wide">
+        </Link>
+        <Link to="/watchlist" className="text-sm font-semibold text-gray-300 hover:text-blue-400 transition-all duration-300 uppercase tracking-wide">
           Watchlist
-        </a>
-        <a href="/mood" className="text-sm font-semibold text-gray-300 hover:text-blue-400 transition-all duration-300 uppercase tracking-wide">
+        </Link>
+        <Link to="/mood" className="text-sm font-semibold text-gray-300 hover:text-blue-400 transition-all duration-300 uppercase tracking-wide">
           Mood Selector
-        </a>
+        </Link>
       </div>
+
+
+      <button onClick={inc}>Increment</button>
+      <h5>{count}</h5>
 
     </nav>
   )
