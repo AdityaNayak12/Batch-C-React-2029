@@ -23,13 +23,16 @@ function App() {
       return "Merry go Round Started";
     },
   };
+
+  const person = {
+    name: "Atharv",
+  };
   return (
     <>
-      <ParkContext value={parkInfo}>
-      <Parent1  />
-      <Parent2/>
+      <ParkContext value={{ parkInfo, person }}>
+        <Parent1 />
+        <Parent2 />
       </ParkContext>
-      
     </>
   );
 }

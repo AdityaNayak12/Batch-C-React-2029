@@ -2,10 +2,10 @@ import React, { useContext } from "react";
 import { ParkContext } from "./ParkContext";
 
 function Child2() {
-  const { waterSlide, ticketforWaterSlide } = useContext(ParkContext);
+  const { parkInfo } = useContext(ParkContext);
   return (
     <div className="children">
-      Child2 {waterSlide} {ticketforWaterSlide()}
+      Child2 {parkInfo.waterSlide} {parkInfo.ticketforWaterSlide()}
     </div>
   );
 }
