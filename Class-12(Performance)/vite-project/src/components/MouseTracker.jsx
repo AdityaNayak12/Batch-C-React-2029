@@ -13,6 +13,12 @@ function MouseTracker() {
     }
 
     window.addEventListener("mousemove", handleMouseMove);
+
+    // UseEffect's Cleanup
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      console.log("UseEffect Stopped");
+    };
   }, [track]);
 
   return (
